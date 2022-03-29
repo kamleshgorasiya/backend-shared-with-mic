@@ -1,0 +1,1 @@
+npx ts-node download-introspection-schema.ts

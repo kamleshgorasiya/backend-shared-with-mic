@@ -1,0 +1,45 @@
+overwrite: true
+config:
+  strict: true,
+  namingConvention:
+    enumValues: 'keep'
+  scalars:
+    ID: 'string | number'
+  maybeValue: 'T'
+
+generates:
+  ./generated-shop-types.ts:
+    schema:
+      - ./schema-shop.json
+      - ../**/schema-extension*.gql
+    plugins:
+      - add:
+          content: /* eslint-disable */
+      - typescript
+
+  ./generated-shop-errors.ts:
+    schema:
+      - ./schema-shop.json
+      - ../**/schema-extension*.gql
+    plugins:
+      - add:
+          content: /* eslint-disable */
+      - ./graphql-errors-plugin.js
+
+  ./generated-admin-types.ts:
+    schema:
+      - ./schema-admin.json
+      - ../**/schema-extension*.gql
+    plugins:
+      - add:
+          content: /* eslint-disable */
+      - typescript
+
+  ./generated-admin-errors.ts:
+    schema:
+      - ./schema-admin.json
+      - ../**/schema-extension*.gql
+    plugins:
+      - add:
+          content: /* eslint-disable */
+      - ./graphql-errors-plugin.js

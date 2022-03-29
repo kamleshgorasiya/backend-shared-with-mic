@@ -1,0 +1,1 @@
+npx ts-node populate-share-price.ts

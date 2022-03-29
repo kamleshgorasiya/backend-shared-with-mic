@@ -1,0 +1,19 @@
+{{> header title="Trylah - Verify Your New Email Address" }}
+
+<mj-section background-color="#ffffff">
+    <mj-column>
+        <mj-text font-size="17px" color="#525252" padding-bottom="20px" align="center">
+          <strong>TryLah received a request to change your registered email address to this one. </strong>
+        </mj-text>
+        <mj-text font-size="17px" color="#525252" padding-bottom="10px" align="center">
+          Click the link below to verify this email address.
+        </mj-text>
+
+        <mj-button font-family="Helvetica"
+                   background-color="#ff433f"
+                   color="white"
+                   href="{{ changeEmailAddressUrl }}?token={{ identifierChangeToken }}">
+            <strong>Verify Email</strong>
+        </mj-button>
+    </mj-column>
+</mj-section>

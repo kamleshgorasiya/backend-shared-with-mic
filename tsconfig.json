@@ -1,0 +1,16 @@
+{
+    "exclude": ["node_modules", "migration.ts"],
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "strict": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "sourceMap": false,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "strictPropertyInitialization": false
+    }
+}

@@ -1,0 +1,29 @@
+type Share {
+  id: ID
+  ticker: String
+  isin: String
+  name: String
+  country: String
+  exchange: String
+}
+
+type ShareList {
+  items: [Share]!
+  totalShares: Int!
+}
+
+type SharePrice {
+  id: Int
+  ticker: String
+  date: String
+  price: String
+}
+
+type ShareTimeSeries {
+  timeseries: [SharePrice]!
+}
+
+extend type Query {
+  shares: ShareList!
+  shareTimeSeries(id: ID!): ShareTimeSeries!
+}

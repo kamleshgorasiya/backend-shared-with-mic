@@ -1,0 +1,19 @@
+{{> header title="TryLah Signup - Verify Your Email Address" }}
+
+<mj-section background-color="#ffffff">
+    <mj-column>
+        <mj-text font-size="17px" color="#525252" padding-bottom="20px" align="center">
+          <strong>Thank you for signing up with TryLah. </strong>
+        </mj-text>
+        <mj-text font-size="17px" color="#525252" padding-bottom="10px" align="center">
+          Click the link below to verify this email address.
+        </mj-text>
+
+        <mj-button font-family="Helvetica" 
+                   background-color="#ff433f" 
+                   color="white" 
+                   href="{{ verifyEmailAddressUrl }}?token={{ verificationToken }}">
+          <strong>Verify Email</strong>
+        </mj-button>
+    </mj-column>
+</mj-section>

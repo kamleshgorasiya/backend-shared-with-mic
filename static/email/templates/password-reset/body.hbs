@@ -1,0 +1,24 @@
+{{> header title="TryLah - Password reset" }}
+
+<mj-section background-color="#ffffff">
+    <mj-column>
+        <mj-text font-size="17px" color="#525252" padding-bottom="20px" align="center">
+          <strong>TryLah received a request to reset your account password.</strong>
+        </mj-text>
+        <mj-text font-size="17px" color="#525252" padding-bottom="10px" align="center">
+          Click the link below to proceed.
+        </mj-text>
+
+        <mj-button font-family="Helvetica"
+                   background-color="#ff433f"
+                   color="white"
+                   href="{{ passwordResetUrl }}?token={{ passwordResetToken }}">
+            <strong>Reset password</strong>
+        </mj-button>
+
+        <mj-text font-size="17px" color="#525252" padding-bottom="10px" align="center">
+          If you didn't make this request, you can safely ignore this email - nothing has been changed on your account.
+        </mj-text>
+
+    </mj-column>
+</mj-section>

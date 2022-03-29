@@ -1,0 +1,47 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "run:server": "ts-node ./src/index.ts",
+    "run:worker": "ts-node ./src/index-worker.ts",
+    "start": "concurrently yarn:run:*",
+    "start:prod": "NODE_ENV=production concurrently yarn:run:*",
+    "build": "tsc",
+    "migration:generate": "ts-node migration generate",
+    "migration:run": "ts-node migration run",
+    "migration:revert": "ts-node migration revert",
+    "populate": "ts-node populate.ts",
+    "codegen": "tsc -p scripts/codegen/plugins && ts-node scripts/codegen/generate-graphql-types.ts",
+    "lint": "eslint --ignore-path .eslintignore --ext .ts ./src"
+  },
+  "dependencies": {
+    "@nestjs/axios": "^0.0.5",
+    "@vendure/admin-ui-plugin": "1.5.0",
+    "@vendure/asset-server-plugin": "1.5.0",
+    "@vendure/core": "1.5.0",
+    "@vendure/email-plugin": "1.5.0",
+    "@vendure/job-queue-plugin": "^1.5.0",
+    "@vendure/ui-devkit": "^1.5.0",
+    "bullmq": "^1.67.2",
+    "pg": "8.7.1",
+    "typescript": "4.3.5"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "^3.1.1",
+    "@graphql-codegen/cli": "^2.3.1",
+    "@graphql-codegen/typescript": "^2.4.2",
+    "@graphql-codegen/typescript-compatibility": "^2.1.5",
+    "@graphql-codegen/typescript-operations": "^2.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "@vendure/create": "^1.5.0",
+    "@vendure/testing": "^1.5.0",
+    "concurrently": "7.0.0",
+    "csv-parse": "^5.0.4",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "ts-node": "10.4.0"
+  }
+}
